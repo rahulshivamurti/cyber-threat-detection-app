@@ -1,0 +1,11 @@
+log,label,ip_address,device,location,timestamp
+"Suspicious login from unknown IP",Threat,192.168.1.101,Windows PC,New York,2024-02-25 10:23:45
+"Normal user login detected",Normal,192.168.1.50,Macbook Pro,San Francisco,2024-02-25 12:10:30
+"Multiple failed login attempts observed",Threat,10.0.0.15,Android Phone,Los Angeles,2024-02-25 08:15:12
+"Routine network traffic",Normal,192.168.1.200,Linux Server,Chicago,2024-02-25 11:45:00
+"Unauthorized access attempt detected",Threat,172.16.0.5,Windows Laptop,Dallas,2024-02-25 14:20:50
+"Regular system backup activity",Normal,192.168.2.20,Mac Mini,Seattle,2024-02-25 01:12:15
+"Abnormal data transfer volume",Threat,10.1.1.100,Windows Desktop,Miami,2024-02-25 03:40:22
+"Standard browsing activity",Normal,192.168.3.80,iPhone,Las Vegas,2024-02-25 16:05:30
+"Malware signature detected in email",Threat,10.5.5.50,Android Tablet,Boston,2024-02-25 18:55:10
+"System update completed successfully",Normal,192.168.1.10,Ubuntu Server,Denver,2024-02-25 23:05:45

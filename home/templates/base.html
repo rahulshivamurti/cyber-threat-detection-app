@@ -1,0 +1,37 @@
+<!-- cyber_project/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Cyber Threat Detection{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navbar -->
+    <nav class="bg-purple-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl font-bold">Cyber Threat Detection</a>
+
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="hover:underline">Home</a>
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'cyber_form' %}" class="hover:underline">Dashboard</a>
+                    <a href="{% url 'logout' %}" class="hover:underline text-yellow-400">Logout</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="hover:underline">Login</a>
+                    <a href="{% url 'signup' %}" class="hover:underline">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

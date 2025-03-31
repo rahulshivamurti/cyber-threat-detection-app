@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Login - Cyber Threat Detection{% endblock %}
+
+{% block content %}
+<div class="flex justify-center items-center min-h-screen">
+    <div class="flex bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+        
+        <!-- Left Side - Image -->
+        <div class="w-1/2 hidden md:block">
+            <img src="https://informationage-production.s3.amazonaws.com/uploads/2022/10/creating-rolling-out-effective-cyber-security-strategy.jpeg" alt="Login Cyber Theme" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-center text-purple-600 mb-6">Login</h2>
+
+            {% if messages %}
+                <div class="mb-4 text-red-500 text-center">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                    <input type="text" name="username" placeholder="Enter Username" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-400" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-400" required>
+                </div>
+                <button type="submit" class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition duration-300">Login</button>
+            </form>
+
+            <p class="text-center mt-4 text-gray-600">
+                Don't have an account? <a href="{% url 'signup' %}" class="text-purple-500 font-bold hover:underline">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

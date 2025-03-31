@@ -1,0 +1,15 @@
+<!-- cyber/templates/cyber/result.html -->
+{% extends 'base.html' %}
+{% block title %}Cyber Threat Detection Result{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto mt-10">
+  <div class="bg-purple-100 p-8 rounded-lg shadow-lg border border-purple-300 text-center">
+    <h3 class="text-3xl font-bold text-purple-900">Detection Result</h3>
+    <p class="text-2xl mt-4">Threat Status: <span class="font-semibold text-purple-900">{{ prediction }}</span></p>
+    <p class="mt-2">Log: <span class="font-semibold text-gray-700">{{ log }}</span></p>
+  </div>
+  <div class="mt-6 text-center">
+    <a href="{% url 'cyber_form' %}" class="bg-purple-500 text-white px-6 py-3 rounded-lg font-bold transition hover:bg-purple-700">Detect Another Log</a>
+  </div>
+</div>
+{% endblock %}

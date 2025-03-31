@@ -1,0 +1,11 @@
+log,label
+"Suspicious login from unknown IP",Threat
+"Normal user login detected",Normal
+"Multiple failed login attempts observed",Threat
+"Routine network traffic",Normal
+"Unauthorized access attempt detected",Threat
+"Regular system backup activity",Normal
+"Abnormal data transfer volume",Threat
+"Standard browsing activity",Normal
+"Malware signature detected in email",Threat
+"System update completed successfully",Normal
